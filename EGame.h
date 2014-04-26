@@ -11,7 +11,14 @@
 @interface EGame : SKScene
 
 @property (nonatomic, retain) UIButton *menu;
-//@property (nonatomic) NSMutableArray *brique;
+@property (nonatomic) NSMutableArray *brique;
+@property (nonatomic) SKSpriteNode *raquet;
+
+struct Player{
+    float x;
+    float y;
+    int vies;
+};
 
 @end
 

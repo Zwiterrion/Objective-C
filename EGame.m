@@ -25,24 +25,33 @@
         // Bouton menu
         _menu = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [_menu setBackgroundImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
-        _menu.frame = CGRectMake(650, 25, 100, 100);
+        _menu.frame = CGRectMake(650, 25, 70, 70);
         [_menu addTarget:self action:@selector(moveToMenu) forControlEvents:UIControlEventTouchUpInside];
         
-      /*  _brique = [NSMutableArray array];
-        for(int i =0; i<10; i++)
+        _brique = [NSMutableArray array];
+        for(int i =0; i<15; i++)
         {
-            SKSpriteNode *node = [SKSpriteNode spriteNodeWithImageNamed:@"brique.png"];
-            //node.position = CGPointMake(<#CGFloat x#>, <#CGFloat y#>)
+            SKSpriteNode *node = [SKSpriteNode spriteNodeWithImageNamed:@"Brique.png"];
+            float y, x; // Varaible for coordonnées
+            if(i < 7){
+                y = 900;
+                x = 70 + 105 *i;
+            }
+            else {
+                y = 860;
+                x = -140 + 105 * (i/2);
+            }
+            node.size = CGSizeMake(100, 25); // Dimension of tiles
+            node.position = CGPointMake(x, y);
             [_brique insertObject:node atIndex:i];
-        }*/
+            [self addChild:node];
+        }
     }
     return self;
 }
 -(void)didMoveToView:(SKView *)view
 {
     [self.view addSubview:_menu];
-    
-    
 }
 -(void)moveToMenu
 {
