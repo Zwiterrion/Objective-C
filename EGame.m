@@ -11,6 +11,9 @@
 #import "EMyScene.h"
 
 @implementation EGame
+{
+    
+}
 
 - (id)initWithSize:(CGSize)size
 {
@@ -21,15 +24,25 @@
         
         // Bouton menu
         _menu = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [_menu setBackgroundImage:[UIImage imageNamed:@"menu.png"] forState:UIControlStateNormal];
-        _menu.frame = CGRectMake(550, 15, 200, 50);
+        [_menu setBackgroundImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
+        _menu.frame = CGRectMake(650, 25, 100, 100);
         [_menu addTarget:self action:@selector(moveToMenu) forControlEvents:UIControlEventTouchUpInside];
+        
+      /*  _brique = [NSMutableArray array];
+        for(int i =0; i<10; i++)
+        {
+            SKSpriteNode *node = [SKSpriteNode spriteNodeWithImageNamed:@"brique.png"];
+            //node.position = CGPointMake(<#CGFloat x#>, <#CGFloat y#>)
+            [_brique insertObject:node atIndex:i];
+        }*/
     }
     return self;
 }
 -(void)didMoveToView:(SKView *)view
 {
     [self.view addSubview:_menu];
+    
+    
 }
 -(void)moveToMenu
 {

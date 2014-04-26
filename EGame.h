@@ -11,6 +11,7 @@
 @interface EGame : SKScene
 
 @property (nonatomic, retain) UIButton *menu;
+//@property (nonatomic) NSMutableArray *brique;
 
 @end
 
