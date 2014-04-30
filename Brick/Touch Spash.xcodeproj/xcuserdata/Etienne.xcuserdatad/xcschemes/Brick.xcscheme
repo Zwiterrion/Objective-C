@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8FAADBCE190BA4EA001B6C29"
-               BuildableName = "Brick.app"
-               BlueprintName = "Brick"
-               ReferencedContainer = "container:Brick.xcodeproj">
+               BuildableName = "Touch Spash.app"
+               BlueprintName = "Touch Spash"
+               ReferencedContainer = "container:Touch Spash.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8FAADBF6190BA4EA001B6C29"
-               BuildableName = "BrickTests.xctest"
-               BlueprintName = "BrickTests"
-               ReferencedContainer = "container:Brick.xcodeproj">
+               BuildableName = "Touch SpashTests.xctest"
+               BlueprintName = "Touch SpashTests"
+               ReferencedContainer = "container:Touch Spash.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FAADBCE190BA4EA001B6C29"
-            BuildableName = "Brick.app"
-            BlueprintName = "Brick"
-            ReferencedContainer = "container:Brick.xcodeproj">
+            BuildableName = "Touch Spash.app"
+            BlueprintName = "Touch Spash"
+            ReferencedContainer = "container:Touch Spash.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FAADBCE190BA4EA001B6C29"
-            BuildableName = "Brick.app"
-            BlueprintName = "Brick"
-            ReferencedContainer = "container:Brick.xcodeproj">
+            BuildableName = "Touch Spash.app"
+            BlueprintName = "Touch Spash"
+            ReferencedContainer = "container:Touch Spash.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FAADBCE190BA4EA001B6C29"
-            BuildableName = "Brick.app"
-            BlueprintName = "Brick"
-            ReferencedContainer = "container:Brick.xcodeproj">
+            BuildableName = "Touch Spash.app"
+            BlueprintName = "Touch Spash"
+            ReferencedContainer = "container:Touch Spash.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

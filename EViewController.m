@@ -24,6 +24,20 @@
     SKScene * scene = [EMyScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"level" ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc]initWithContentsOfFile:path];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *newPath =[documentDirectory stringByAppendingPathComponent:@"level.plist"];
+    BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:newPath];
+    if(!fileExists){
+        [dict writeToFile:newPath atomically:YES];
+        NSLog(@"Fichier crée");
+    }
+    else {
+        NSLog(@"Fichier existant");
+    }
+    
     // Present the scene.
     [skView presentScene:scene];
 }

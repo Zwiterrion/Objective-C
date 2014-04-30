@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Brick.xcodeproj">
+      location = "self:Touch Spash.xcodeproj">
    </FileRef>
 </Workspace>

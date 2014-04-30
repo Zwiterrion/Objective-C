@@ -24,7 +24,7 @@
         option.fontSize = 75.0;
         option.text = @"Options";
         [self addChild:option];
-        _defaults = [NSUserDefaults standardUserDefaults];
+        
         
         // Label for sound
         _l_sound = [[SKLabelNode alloc]initWithFontNamed:@"Chalkduster"];
@@ -41,6 +41,8 @@
         _l_music.text = @"Music";
         _l_music.fontSize = 50.0;
         [self addChild:_l_music];
+        
+        _defaults = [NSUserDefaults standardUserDefaults];
         
         
         // Switch sound
@@ -61,8 +63,9 @@
         [_bar_music setValue:[_defaults floatForKey:@"bar_music"] animated:YES];
         [_bar_music setTintColor:[UIColor colorWithRed:0 green:1.0 blue:0 alpha:1.0]];
         _bar_music.hidden = YES;
-
        
+        //Audio
+        AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("brique"), CFSTR("caf"), NULL), &bip);
     }
     return self;
 }
@@ -70,6 +73,7 @@
 {
      [self.view addSubview:_music];
      [self.view addSubview:_sound];
+    
     // Sound and music
     _soundDefauts = [_defaults integerForKey:@"sound"];
     _musicDefauts = [_defaults integerForKey:@"music"];
@@ -132,10 +136,13 @@
     [_music removeFromSuperview];
     [_bar_music removeFromSuperview];
     [_bar_sound removeFromSuperview];
+    
+    if(_soundDefauts == 1)
+        AudioServicesPlaySystemSound(bip);
     [self.view presentScene:scene transition:transition];
 }
 -(NSUserDefaults*)defaults
 {
-    return [self defaults];
+    return _defaults;
 }
 @end
